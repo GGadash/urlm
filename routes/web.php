@@ -11,7 +11,15 @@
 |
 */
 
+
 Auth::routes();
+
+
+Route::get('/{id}', 'UrlredirController@redirUrl');
+
+
+Route::group(['middleware' => 'auth'], function () {
+
 
 Route::get('/', 'GurlmapController@showGurl');
 
@@ -24,5 +32,5 @@ Route::get('/urlinfo/{id}', 'GurlmapController@displayInfo');
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/{id}', 'UrlredirController@redirUrl');
+});
 

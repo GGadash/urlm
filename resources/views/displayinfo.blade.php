@@ -2,6 +2,10 @@
 
 @include('common.errors')
 
+@extends('layouts.app')
+
+@section('content')
+
 <DIV>ID: {{ $urlinfo->id }}</DIV>
 
 <p><DIV>Short URL: </DIV>
@@ -9,3 +13,5 @@
 
 <p><DIV>Long URL: </DIV>
 <DIV>{{ $urlinfo->longurl }}</DIV></p>
+
+@endsection
