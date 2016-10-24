@@ -35,6 +35,7 @@ class GurlmapController extends Controller
 	
     $urlmapping = new UrlMapping;
     $urlmapping->longurl = $request->longurl;
+	$urlmapping->userid = $request->user()->id;
     $urlmapping->save();
 
 	return redirect('/urlinfo/'.$urlmapping->id);

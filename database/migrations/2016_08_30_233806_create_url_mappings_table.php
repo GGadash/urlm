@@ -17,6 +17,7 @@ class CreateUrlMappingsTable extends Migration
             $table->increments('id');
 			$table->string('longurl', 8190);
             $table->timestamps();
+			$table->string('userid', 9);
         });
     }
 
